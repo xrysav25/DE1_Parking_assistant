@@ -12,9 +12,20 @@ Write your text here.
 
 
 ## Hardware description
+### Ultrasonic distance sensor HC-SR04
+
+#### Adaptor board
+|![model of board sensor](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Adapter_HC-SR04_model.png)|
+|:--:| 
+|![board sensor](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Adapter_HC-SR04_board.png)|
+|:--:| 
+|*Board design*|
+|*Model of designed board (note that due to the nonexistance of models for female headers, male ones are used insted*|
+|![schematic sensor](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Adapter_HC-SR04_schematic.png)|
+|:--:| 
+|*Board schematic*|
 
 ### LED bargaph module
-
 For LED visualization we have chosem bargraph with 10 LEDs and segments with diferent colors, as can be seen below.
 |![bargaph](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Bargaph%20example.png)|
 |:--:| 
@@ -22,7 +33,7 @@ For LED visualization we have chosem bargraph with 10 LEDs and segments with dif
 
 Its first segment is blue which will represent ON/OFF state indication. Other segments represent actual distance ranging from green to red. For the actual bargraph we have designed small module board, that will conect to Arty board through 2 Pmod connectors.
 
-|![model of board](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Module%20model.png)|
+|![model of board LEDs](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Module%20model.png)|
 |:--:| 
 |*Model of designed board*|
 
@@ -32,6 +43,19 @@ Board is fitted with bargraph itself, liminig resistors and 2 pinheader blocks. 
 |:--:| 
 |*Board design*|
 |![schematic LEDs](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Module%20schematic.png)|
+|*Board schematic*|
+
+### Piezzo buzzer
+
+#### Adaptor board
+|![model of board piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezo_daptor_model.png)|
+|:--:| 
+|![board piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezo_daptor_board.png)|
+|:--:| 
+|*Board design*|
+|*Model of designed board (note that due to the nonexistance of models for female headers, male ones are used insted*|
+|![schematic piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezo_daptor_schematic.png)|
+|:--:| 
 |*Board schematic*|
 ## VHDL modules description and simulations
 
