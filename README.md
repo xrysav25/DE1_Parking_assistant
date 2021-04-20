@@ -12,12 +12,18 @@ Write your text here.
 
 
 ## Hardware description
+### Arty A7
+The Arty A7, formerly known as the Arty, is a ready-to-use development platform designed around the Artix-7™ Field Programmable Gate Array (FPGA) from Xilinx. It was designed specifically for use as a MicroBlaze Soft Processing System. When used in this context, the Arty A7 becomes the most flexible processing platform you could hope to add to your collection, capable of adapting to whatever your project requires. Unlike other Single Board Computers, the Arty A7 isn't bound to a single set of processing peripherals: One moment it's a communication powerhouse chock-full of UARTs, SPIs, IICs, and an Ethernet MAC, and the next it's a meticulous timekeeper with a dozen 32-bit timers.[1]
+|![arty](https://reference.digilentinc.com/_media/reference/programmable-logic/arty/arty-0.png)|
+|:--:| 
+|*Arty A7 board[2]*|
 ### Ultrasonic distance sensor HC-SR04
 
 #### Adaptor board
+Board was designed in Autodesk EAGLE.
 |![model of board sensor](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Adapter_HC-SR04_model.png)|
 |:--:| 
-|*Model of designed board (note that due to the nonexistance of models for female headers, male ones are used insted*|
+|*Model of designed board (note that due to the nonexistance of models for female headers, male ones are used insted)*|
 |![board sensor](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Adapter_HC-SR04_board.png)|
 |*Board design*|
 |![schematic sensor](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Adapter_HC-SR04_schematic.png)|
@@ -27,7 +33,7 @@ Write your text here.
 For LED visualization we have chosem bargraph with 10 LEDs and segments with diferent colors, as can be seen below.
 |![bargaph](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Bargaph%20example.png)|
 |:--:| 
-|*Example of used bargraph[1]*|
+|*Example of used bargraph[3]*|
 
 Its first segment is blue which will represent ON/OFF state indication. Other segments represent actual distance ranging from green to red. For the actual bargraph we have designed small module board, that will conect to Arty board through 2 Pmod connectors.
 
@@ -46,9 +52,10 @@ Board is fitted with bargraph itself, liminig resistors and 2 pinheader blocks. 
 ### Piezzo buzzer
 
 #### Adaptor board
+Board was designed in Autodesk EAGLE.
 |![model of board piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezo_daptor_model.png)|
 |:--:| 
-|*Model of designed board (note that due to the nonexistance of models for female headers, male ones are used insted*|
+|*Model of designed board (note that due to the nonexistance of models for female headers, male ones are used insted)*|
 |![board piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezo_daptor_board.png)|
 |*Board design*|
 |![schematic piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezo_daptor_schematic.png)|
@@ -208,5 +215,7 @@ Write your text here.
 
 
 ## References
+   1. Arty A7 board description. In: digilentinc.com [online]. [cit. 2021-04-20]. Avalible at: https://bit.ly/3dwthiU
+   2. Arty A7 board. In: digilentinc.com [online]. [cit. 2021-04-20]. Avalible at: https://bit.ly/3vb75kt
+   3. Example bargraph picture. In: Amazon.com [online]. [cit. 2021-04-13]. Avalible at: https://amzn.to/3mHVJ4c
 
-   1. Example bargraph picture. In: Amazon.com [online]. [cit. 2021-04-13]. Avalible at: https://amzn.to/3mHVJ4c
