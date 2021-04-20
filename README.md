@@ -17,12 +17,10 @@ Write your text here.
 #### Adaptor board
 |![model of board sensor](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Adapter_HC-SR04_model.png)|
 |:--:| 
-|![board sensor](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Adapter_HC-SR04_board.png)|
-|:--:| 
-|*Board design*|
 |*Model of designed board (note that due to the nonexistance of models for female headers, male ones are used insted*|
+|![board sensor](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Adapter_HC-SR04_board.png)|
+|*Board design*|
 |![schematic sensor](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Adapter_HC-SR04_schematic.png)|
-|:--:| 
 |*Board schematic*|
 
 ### LED bargaph module
@@ -50,12 +48,10 @@ Board is fitted with bargraph itself, liminig resistors and 2 pinheader blocks. 
 #### Adaptor board
 |![model of board piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezo_daptor_model.png)|
 |:--:| 
-|![board piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezo_daptor_board.png)|
-|:--:| 
-|*Board design*|
 |*Model of designed board (note that due to the nonexistance of models for female headers, male ones are used insted*|
+|![board piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezo_daptor_board.png)|
+|*Board design*|
 |![schematic piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezo_daptor_schematic.png)|
-|:--:| 
 |*Board schematic*|
 ## VHDL modules description and simulations
 
