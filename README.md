@@ -18,6 +18,15 @@ The Arty A7, formerly known as the Arty, is a ready-to-use development platform 
 |:--:| 
 |*Arty A7 board[2]*|
 ### Ultrasonic distance sensor HC-SR04
+To measure the distance, we work with the ultrasonic sensor HC-DR04
+|![bargaph](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/sensor.jpg)|
+|:--:| 
+|*Sensor HC-SR04*|
+
+The sensor expects a 10us long pulse, based on which it sends a sequence of ultrasonic pulses and registers their reflection. The sensor returns an echo pulse of a width corresponding to the distance of the object from the sensor.
+Conversion relation: echo pulse length / 58 = distance in cm
+
+The sensor works at a voltage of 5V, so it is not powered from the board but has its own power supply.
 
 #### Adaptor board
 Board was designed in Autodesk EAGLE.
@@ -61,7 +70,10 @@ Board was designed in Autodesk EAGLE.
 |![schematic piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezo_daptor_schematic.png)|
 |*Board schematic*|
 ## VHDL modules description and simulations
-
+### Ultrasonic distance sensor HC-SR04
+The sensor control is divided into two blocks.
+The ```sensor_driver``` module directly controls the HC-SR04 sensor, emits an appropriately long pulse and calculates the response.
+The ```sensor_logic``` module controls when the pulse is sent to the sensor and processes the returned distance, which it converts to 10 levels, which are then implemented in other modules by sound and light.
 ### LED bargaph module
 LED module takes 2 inputs and has 1 output. One of the inputs is enable signal, which determines if module can function or not. Second input is distance level represented by 4-bit std logic vecotr. Output is 10-bit std logic vector for bargraph itself.
 Architecture is represented by by single ```p_led_driver``` combiational process with both inputs in its sensitivity list. First it checks, if enable signal is ON or OFF. If enable is OFF, it will switch off all the LEDs and if it is ON it will continue to determine value of distance level and will light up the LEDs accordingly.
@@ -204,9 +216,11 @@ end Behavioral;
 ```
 #### Simulation Waveforms:
 ![simulation LEDs](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/LEDs%20simul.png)
-## TOP module description and simulations
 
-Write your text here.
+## TOP module description and simulations
+|![schema](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/schema.png)|
+|:--:| 
+|*Top modul schema*|
 
 
 ## Video
