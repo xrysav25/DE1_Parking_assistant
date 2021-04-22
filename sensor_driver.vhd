@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity sensor_driver is
     Port ( CLK100MHZ : in STD_LOGIC;
            puls : in STD_LOGIC;
-           echo : in STD_LOGIC;
+           echo : in STD_LOGIC := '0';
            triger : out STD_LOGIC;
            time_o : out natural);
 end sensor_driver;
@@ -47,7 +47,7 @@ architecture Behavioral of sensor_driver is
 begin
     sensor_puls: process (CLK100MHZ, puls)
     begin
-              
+        --creating 10us puls for sensor      
         if rising_edge(CLK100MHZ) then        -- Synchronous process
             if (puls = '1') then
                 local_reset <= '1';
@@ -69,16 +69,19 @@ begin
     
     echo_count: process (CLK100MHZ, echo)
     begin
-        if rising_edge(CLK100MHZ) then        -- Synchronous process
+        
 
-            if (puls = '1') then       -- High active reset
-                s_time <= 0;       -- Clear local counter
-                s_time_o <= 1;
-                time_o <= s_time_o;
-            -- Test number of clock periods
-            elsif (echo = '1') then
-                time_o <= s_time_o;
-            elsif (s_time >= 5800-1) then
+        if rising_edge(echo) then       -- High active reset
+            s_time <= 0;       -- Clear local counter
+            s_time_o <= 0;
+            time_o <= 0;
+        -- Test number of clock periods
+        elsif falling_edge(echo) then
+            time_o <= s_time_o;
+        end if;
+        
+        if rising_edge(CLK100MHZ) then        -- Synchronous process
+            if (s_time >= 5800-1) then
                 s_time_o <= s_time_o + 1;
                 --time_o <= s_time_o;
                 s_time <= 0; 
@@ -86,6 +89,7 @@ begin
                 s_time <= s_time + 1;
             end if;
         end if;
+
         
     end process echo_count;
 end Behavioral;
