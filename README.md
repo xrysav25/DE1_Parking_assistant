@@ -392,8 +392,8 @@ end testbench;
 ```
 
 ### LED bargaph module
-LED module takes 2 inputs and has 1 output. One of the inputs is enable signal, which determines if module can function or not. Second input is distance level represented by 4-bit std logic vecotr. Output is 10-bit std logic vector for bargraph itself.
-Architecture is represented by by single ```p_led_driver``` combiational process with both inputs in its sensitivity list. First it checks, if enable signal is ON or OFF. If enable is OFF, it will switch off all the LEDs and if it is ON it will continue to determine value of distance level and will light up the LEDs accordingly.
+LED module takes 2 inputs and has 1 output. One of the inputs is enable signal, which determines if module can function or not. Second input is distance level represented by 4-bit std logic vecotor. Output is 10-bit std logic vector for bargraph itself.
+Architecture is represented by single ```p_led_driver``` combiational process with both inputs in its sensitivity list. First it checks, if enable signal is ON or OFF. If enable is OFF, it will switch off all the LEDs and if it is ON it will continue to determine value of distance level and will light up the LEDs accordingly.
 #### Code for module
 ```vhdl
 library IEEE;
@@ -533,6 +533,269 @@ end Behavioral;
 ```
 #### Simulation Waveforms:
 ![simulation LEDs](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/LEDs%20simul.png)
+### PWM modulation module for piezo
+PWM module takes 3 inputs and has one output. One of the inputs is enable signal, which determines if module can function or not. Second input is distance level represented by 4-bit std logic vecotor. Third output is 100HZ clock signal. Output is PWM modulated weveform for the buzzer.
+Architecture is represented by ```p_clk100```,```piezzo_driver```  sequentinal processes . Firts process assures clock. Second is PWM modulation itself. First it checks enable input and its enabled, then it determines distance level and starts appropriate counter with correct pulse widht.
+
+#### Code for module
+```vhdl
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
+
+entity piezzo_driver is
+    Port ( 
+    CLK100HZ             : in   std_logic;
+    en_i                 : in   std_logic;
+    distance_i           : in   std_logic_vector(4 - 1 downto 0);
+    
+    piezzo_o             : out  std_logic
+    );
+end piezzo_driver;
+
+architecture Behavioral of piezzo_driver is
+
+signal s_counter        : natural :=0;
+signal s_counter_clk100 : natural;
+signal clk100           : std_logic;
+signal s_piezzo         : std_logic;
+
+begin
+    p_clk100: process (CLK100HZ)
+    begin
+        if rising_edge(CLK100HZ) then
+            if (s_counter_clk100 >= 10) then
+                s_counter_clk100 <=  0;
+                clk100           <= '1';
+            else
+                s_counter_clk100 <= s_counter_clk100 + 1;
+                clk100           <= '0';
+            end if;
+        end if;
+    end process p_clk100;
+    
+    p_piezzo_driver : process(clk100)
+    begin
+            if (en_i = '1')then
+                case distance_i is
+                    -- 0-10cm
+                    when "0000" =>
+                        piezzo_o <= '1';
+                    -- 10-20cm
+                    when "0001" =>
+                    if rising_edge(clk100)then
+                        if (s_counter >= 1) then
+                            s_counter <= 0;       
+                            piezzo_o  <= '1'; 
+                        else
+                            s_counter <= s_counter + 1;
+                            piezzo_o  <= '0';
+                        end if;
+                    end if;
+                    -- 20-30cm
+                    when "0010" =>
+                    if rising_edge(clk100)then
+                        if (s_counter >= 2) then
+                            s_counter <= 0;       
+                            piezzo_o  <= '1'; 
+                        else
+                            s_counter <= s_counter + 1;
+                            piezzo_o  <= '0';
+                        end if;
+                    end if;
+                    -- 30-40cm
+                    when "0011" =>
+                    if rising_edge(clk100)then
+                        if (s_counter >= 3) then
+                            s_counter <= 0;       
+                            piezzo_o  <= '1'; 
+                        else
+                            s_counter <= s_counter + 1;
+                            piezzo_o  <= '0';
+                        end if;
+                    end if;
+                    -- 40-50cm
+                    when "0100" =>
+                    if rising_edge(clk100)then
+                        if (s_counter >= 4) then
+                            s_counter <= 0;       
+                            piezzo_o  <= '1'; 
+                        else
+                            s_counter <= s_counter + 1;
+                            piezzo_o  <= '0';
+                        end if;
+                    end if;
+                    -- 50-60cm
+                    when "0101" =>
+                    if rising_edge(clk100)then
+                        if (s_counter >= 5) then
+                            s_counter <= 0;       
+                            piezzo_o  <= '1'; 
+                        else
+                            s_counter <= s_counter + 1;
+                            piezzo_o  <= '0';
+                        end if;
+                    end if;
+                    -- 60-70cm
+                    when "0110" =>
+                    if rising_edge(clk100)then
+                        if (s_counter >= 6) then
+                            s_counter <= 0;       
+                            piezzo_o  <= '1'; 
+                        else
+                            s_counter <= s_counter + 1;
+                            piezzo_o  <= '0';
+                        end if;
+                    end if;
+                    -- 70-80cm
+                    when "0111" =>
+                    if rising_edge(clk100)then
+                        if (s_counter >= 7) then
+                            s_counter <= 0;       
+                            piezzo_o  <= '1'; 
+                        else
+                            s_counter <= s_counter + 1;
+                            piezzo_o  <= '0';
+                        end if;
+                    end if;
+                    -- 80-90cm
+                    when "1000" =>
+                    if rising_edge(clk100)then
+                        if (s_counter >= 8) then
+                            s_counter <= 0;       
+                            piezzo_o  <= '1'; 
+                        else
+                            s_counter <= s_counter + 1;
+                            piezzo_o  <= '0';
+                        end if;
+                    end if;
+                    -- >90cm
+                    when others =>
+                        piezzo_o <= '0';
+                end case;
+            else
+                piezzo_o <= '0';
+            end if;
+    end process p_piezzo_driver;    
+end Behavioral;
+```
+#### Testbech for LED module
+```vhdl
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity tb_pwm_2 is
+
+end tb_pwm_2;
+
+architecture Behavioral of tb_pwm_2 is
+    constant clk_period     : time :=10ms;
+    -- Local signals
+    signal s_clk100         : std_logic;
+    signal s_en             : std_logic;
+    signal s_distance       : std_logic_vector(4 - 1 downto 0);
+    
+    signal s_pwm            : std_logic;
+    
+begin
+    
+    uut_piezzo_driver : entity work.piezzo_driver
+        port map(
+            CLK100HZ      => s_clk100,
+            en_i          => s_en,
+            distance_i    => s_distance,
+            
+            piezzo_o      => s_pwm
+        );
+    p_clk_gen100 : process
+    begin
+        while now < 46000 ms loop         
+            s_clk100 <= '0';
+            wait for clk_period / 2;
+            s_clk100 <= '1';
+            wait for clk_period / 2;
+        end loop;
+        wait;
+    end process p_clk_gen100;
+    p_stimulus : process
+    begin
+        -- Report a note at the begining of stimulus process
+        report "Stimulus process started" severity note;
+        s_en       <= '1';
+        -- <90cm
+        s_distance <= "1001";
+        wait for 2000ms;
+        -- 80-90cm
+        s_distance <= "1000";
+        wait for 2000ms;
+        -- 70-80cm
+        s_distance <= "0111";
+        wait for 2000ms;
+        -- 60-70cm
+        s_distance <= "0110";
+        wait for 2000ms;
+        -- 50-60cm
+        s_distance <= "0101";
+        wait for 2000ms;
+        -- 40-50cm
+        s_distance <= "0100";
+        wait for 2000ms;
+        -- 30-40cm
+        s_distance <= "0011";
+        wait for 2000ms;
+        -- 20-30cm
+        s_distance <= "0010";
+        wait for 2000ms;
+        -- 10-20cm
+        s_distance <= "0001";
+        wait for 2000ms;
+        -- 0-10cm
+        s_distance <= "0000";
+        wait for 2000ms;
+        -- 10-20cm
+        s_distance <= "0001";
+        wait for 2000ms;
+        -- 20-30cm
+        s_distance <= "0010";
+        wait for 2000ms;
+        -- 30-40cm
+        s_distance <= "0011";
+        wait for 2000ms;
+        -- 40-50cm
+        s_distance <= "0100";
+        wait for 2000ms;
+        -- 50-60cm
+        s_distance <= "0101";
+        wait for 2000ms;
+        -- 60-70cm
+        s_distance <= "0110";
+        wait for 2000ms;
+        -- 70-80cm
+        s_distance <= "0111";
+        wait for 2000ms;
+        -- 80-90cm
+        s_distance <= "1000";
+        wait for 2000ms;
+        -- >90cm
+        s_distance <= "1001";
+        wait for 2000ms;
+        s_en       <= '0';
+        -- <90cm
+        s_distance <= "1000";
+        wait for 2000ms;
+        -- 80-90cm
+        s_distance <= "0111";
+        wait for 2000ms;
+        -- 70-80cm
+        s_distance <= "0110";
+        -- Report a note at the end of stimulus process
+        report "Stimulus process finished" severity note;
+        wait;
+    end process p_stimulus;
+end Behavioral;
+```
+#### Simulation Waveforms:
+![simulation PWM]()
 
 ## TOP module description and simulations
 |![schema](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/schema.png)|
