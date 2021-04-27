@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/313cz/vivado/led_driver/led_driver.srcs/sources_1/new/led_driver.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'led_driver'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/313cz/vivado/led_driver/led_driver.srcs/sim_1/new/tb_led_driver.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_led_driver'
