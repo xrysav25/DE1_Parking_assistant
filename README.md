@@ -817,5 +817,5 @@ end Behavioral;
    2. Arty A7 board. In: digilentinc.com [online]. [cit. 2021-04-20]. Avalible at: https://bit.ly/3vb75kt
    3. HC-SR04 sensor. In: Amazon.com [online]. [cit. 2021-04-27]. Avalible at: https://amzn.to/3dVaez2
    4. Example bargraph picture. In: Amazon.com [online]. [cit. 2021-04-13]. Avalible at: https://amzn.to/3mHVJ4c
-   5. Active piezzo buzzer. In: conrad.cz [online]. [cit. 2021-04-13]. Avalible at: https://bit.ly/3vlYYkX
+   5. Active piezzo buzzer. In: conrad.cz [online]. [cit. 2021-04-27]. Avalible at: https://bit.ly/3vlYYkX
 
