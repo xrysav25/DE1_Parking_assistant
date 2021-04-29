@@ -15,19 +15,19 @@ The sensor measures a distance from 2 cm to 4 m, but for our purpose we used onl
 The codes, testbenches and simulations are created in Vivado. Models and designes of boards are created in Autodesk EAGLE.
 |![parking assistant](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Parking%20assistant.png)|
 |:--:|
-
+|*Illustration image of parking assistant[1]*|
 
 ## Hardware description
 ### Arty A7
-The Arty A7, formerly known as the Arty, is a ready-to-use development platform designed around the Artix-7™ Field Programmable Gate Array (FPGA) from Xilinx. It was designed specifically for use as a MicroBlaze Soft Processing System. When used in this context, the Arty A7 becomes the most flexible processing platform you could hope to add to your collection, capable of adapting to whatever your project requires. Unlike other Single Board Computers, the Arty A7 isn't bound to a single set of processing peripherals: One moment it's a communication powerhouse chock-full of UARTs, SPIs, IICs, and an Ethernet MAC, and the next it's a meticulous timekeeper with a dozen 32-bit timers.[1]
+The Arty A7, formerly known as the Arty, is a ready-to-use development platform designed around the Artix-7™ Field Programmable Gate Array (FPGA) from Xilinx. It was designed specifically for use as a MicroBlaze Soft Processing System. When used in this context, the Arty A7 becomes the most flexible processing platform you could hope to add to your collection, capable of adapting to whatever your project requires. Unlike other Single Board Computers, the Arty A7 isn't bound to a single set of processing peripherals: One moment it's a communication powerhouse chock-full of UARTs, SPIs, IICs, and an Ethernet MAC, and the next it's a meticulous timekeeper with a dozen 32-bit timers.[2]
 |![arty](https://reference.digilentinc.com/_media/reference/programmable-logic/arty/arty-0.png)|
 |:--:| 
-|*Arty A7 board[2]*|
+|*Arty A7 board[3]*|
 ### Ultrasonic distance sensor HC-SR04
 To measure the distance, we work with the ultrasonic sensor HC-DR04
 |![sensor](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/sensor.jpg)|
 |:--:| 
-|*Sensor HC-SR04[3]*|
+|*Sensor HC-SR04[4]*|
 
 The sensor expects a 10us long pulse, based on which it sends a sequence of ultrasonic pulses and registers their reflection. The sensor returns an echo pulse of a width corresponding to the distance of the object from the sensor.
 Conversion relation: echo pulse length / 58 = distance in cm
@@ -48,7 +48,7 @@ Board was designed in Autodesk EAGLE.
 For LED visualization we have chosem bargraph with 10 LEDs and segments with diferent colors, as can be seen below.
 |![bargaph](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Bargaph%20example.png)|
 |:--:| 
-|*Example of used bargraph[4]*|
+|*Example of used bargraph[5]*|
 
 Its first segment is blue which will represent ON/OFF state indication. Other segments represent actual distance ranging from green to red. For the actual bargraph we have designed small module board, that will conect to Arty board through 2 Pmod connectors.
 
@@ -68,7 +68,7 @@ Board is fitted with bargraph itself, liminig resistors and 2 pinheader blocks. 
 For sound feadback we decided to use active piezzo buzzer witch can worl on 3.3V logic values on Arty board.
 |![buzzer](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezzo.png)|
 |:--:| 
-|*Piezzo buzzer[5]*|
+|*Piezzo buzzer[6]*|
 #### Adaptor board
 Board was designed in Autodesk EAGLE.
 |![model of board piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezo_daptor_model.png)|
@@ -819,9 +819,11 @@ end Behavioral;
 
 
 ## References
-   1. Arty A7 board description. In: digilentinc.com [online]. [cit. 2021-04-20]. Avalible at: https://bit.ly/3dwthiU
-   2. Arty A7 board. In: digilentinc.com [online]. [cit. 2021-04-20]. Avalible at: https://bit.ly/3vb75kt
-   3. HC-SR04 sensor. In: Amazon.com [online]. [cit. 2021-04-27]. Avalible at: https://amzn.to/3dVaez2
-   4. Example bargraph picture. In: Amazon.com [online]. [cit. 2021-04-13]. Avalible at: https://amzn.to/3mHVJ4c
-   5. Active piezzo buzzer. In: conrad.cz [online]. [cit. 2021-04-27]. Avalible at: https://bit.ly/3vlYYkX
+
+   1. Parking sensor illustration. In: proxel.com [online]. [cit. 2021-04-29]. Avalible at: https://bit.ly/3e0bhO8
+   2. Arty A7 board description. In: digilentinc.com [online]. [cit. 2021-04-20]. Avalible at: https://bit.ly/3dwthiU
+   3. Arty A7 board. In: digilentinc.com [online]. [cit. 2021-04-20]. Avalible at: https://bit.ly/3vb75kt
+   4. HC-SR04 sensor. In: Amazon.com [online]. [cit. 2021-04-27]. Avalible at: https://amzn.to/3dVaez2
+   5. Example bargraph picture. In: Amazon.com [online]. [cit. 2021-04-13]. Avalible at: https://amzn.to/3mHVJ4c
+   6. Active piezzo buzzer. In: conrad.cz [online]. [cit. 2021-04-27]. Avalible at: https://bit.ly/3vlYYkX
 
