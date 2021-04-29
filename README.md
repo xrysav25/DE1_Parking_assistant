@@ -9,7 +9,7 @@
 ### Project objectives
 
 |![parking assistant](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Parking%20assistant.png)|
-
+|:--:|
 The objective of the project within the subject Digital electronics was to create a parking assistant. 
 We used these components. Arty A7 board to conotrol all other parts, led bargraph to signalize the distance,
 piezo buzzer with PWM modulation for sound signalization, HC-SR04 ultrasonic sensor to measure distance. 
