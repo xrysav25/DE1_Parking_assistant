@@ -8,13 +8,14 @@
 
 ### Project objectives
 
-|![parking assistant](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Parking%20assistant.png)|
-|:--:|
 The objective of the project within the subject Digital electronics was to create a parking assistant. 
 We used these components. Arty A7 board to conotrol all other parts, led bargraph to signalize the distance,
 piezo buzzer with PWM modulation for sound signalization, HC-SR04 ultrasonic sensor to measure distance. 
 The sensor measures a distance from 2 cm to 4 m, but for our purpose we used only measurements up to 1m.
 The codes, testbenches and simulations are created in Vivado. Models and designes of boards are created in Autodesk EAGLE.
+|![parking assistant](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Parking%20assistant.png)|
+|:--:|
+
 
 ## Hardware description
 ### Arty A7
