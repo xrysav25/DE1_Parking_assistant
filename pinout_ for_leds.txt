@@ -1,0 +1,10 @@
+leds_o(0) => E15
+leds_o(1) => J17
+leds_o(2) => E16
+leds_o(3) => J18
+leds_o(4) => D15
+leds_o(5) => K15
+leds_o(6) => C15
+leds_o(7) => J15
+leds_o(8) => U12
+leds_o(9) => U14
