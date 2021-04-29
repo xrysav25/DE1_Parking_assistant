@@ -74,9 +74,9 @@ Board was designed in Autodesk EAGLE.
 |![model of board piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezo_daptor_model.png)|
 |:--:| 
 |*Model of designed board (note that due to the nonexistance of models for female headers, male ones are used insted)*|
-|![board piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezo_daptor_board.png)|
+|![board piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/piezzo_board_fixed.png)|
 |*Board design*|
-|![schematic piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezo_daptor_schematic.png)|
+|![schematic piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/piezzo_sch_fixed.png)|
 |*Board schematic*|
 ## VHDL modules description and simulations
 ### Ultrasonic distance sensor HC-SR04
