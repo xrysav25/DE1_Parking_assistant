@@ -967,60 +967,7 @@ begin
     begin
     s_sw(0) <= '1';
    
-    --s_ja(4) <= '1';
-    --wait for 580 us; s_ja(4) <= '0';
-        
-        wait for 580 us; --10cm
-        s_ja(4) <= '1';
-        wait for 580 us;
-        s_ja(4) <= '0';
-        
-        wait for 1160 us; --20cm
-        s_ja(4) <= '1'; 
-        wait for 1160 us; 
-        s_ja(4) <= '0';
-        
-        wait for 3190 us; --55cm
-        s_ja(4) <= '1'; 
-        wait for 3190 us; 
-        s_ja(4) <= '0';
-        
-        wait for 116 us; --2cm
-        s_ja(4) <= '1'; 
-        wait for 116 us; 
-        s_ja(4) <= '0';
-        
-        wait for 5800 us; --100cm
-        s_ja(4) <= '1'; 
-        wait for 5800 us; 
-        s_ja(4) <= '0';
-       
-        wait for 8700 us; --150cm
-        s_ja(4) <= '1'; 
-        wait for 8700 us; 
-        s_ja(4) <= '0';
-        
-        wait for 3994 us; --68cm
-        s_ja(4) <= '1'; 
-        wait for 3994 us; 
-        s_ja(4) <= '0';
-        
-        wait for 696 us; --12cm
-        s_ja(4) <= '1'; 
-        wait for 696 us; 
-        s_ja(4) <= '0';
-        
-        wait for 5684 us; --98cm
-        s_ja(4) <= '1'; 
-        wait for 5684 us; 
-        s_ja(4) <= '0';
-        
-        wait for 4582 us; --79cm
-        s_ja(4) <= '1'; 
-        wait for 4582 us; 
-        s_ja(4) <= '0';
-        
-   
+    
       
    
      wait;       
