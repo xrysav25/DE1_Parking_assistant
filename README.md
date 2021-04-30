@@ -29,7 +29,7 @@ Conversion relation: echo pulse length / 58 = distance in cm
 The sensor works at a voltage of 5V, so it is not powered from the board but has its own power supply.
 
 #### Adaptor board
-Board was designed in Autodesk EAGLE.
+Board was designed in Autodesk EAGLE. Board is connected to Pmod JA connector.
 |![model of board sensor](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Adapter_HC-SR04_model.png)|
 |:--:| 
 |*Model of designed board (note that due to the nonexistance of models for female headers, male ones are used insted)*|
@@ -50,7 +50,7 @@ Its first segment is blue which will represent ON/OFF state indication. Other se
 |:--:| 
 |*Model of designed board*|
 
-Board is fitted with bargraph itself, liminig resistors and 2 pinheader blocks. Board was designed in Autodesk EAGLE.
+Board is fitted with bargraph itself, liminig resistors and 2 pinheader blocks. Board was designed in Autodesk EAGLE. Board is connected to Pmod JB and JC connector.
 
 |![board LEDs](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Module%20board.png)|
 |:--:| 
@@ -64,7 +64,7 @@ For sound feadback we decided to use active piezzo buzzer witch can worl on 3.3V
 |:--:| 
 |*Piezzo buzzer[5]*|
 #### Adaptor board
-Board was designed in Autodesk EAGLE.
+Board was designed in Autodesk EAGLE. Board is connected to Pmod JD connector.
 |![model of board piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezo_daptor_model.png)|
 |:--:| 
 |*Model of designed board (note that due to the nonexistance of models for female headers, male ones are used insted)*|
