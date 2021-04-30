@@ -1,1 +1,0 @@
--wto "24b08802bcf747cdaaf3d9e49a5ddcf4" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "led_driver_behav" "xil_defaultlib.led_driver" -log "elaborate.log" 

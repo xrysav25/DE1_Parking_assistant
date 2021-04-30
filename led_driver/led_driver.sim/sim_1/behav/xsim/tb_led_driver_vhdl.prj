@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../led_driver.srcs/sources_1/new/led_driver.vhd" \
-"../../../../led_driver.srcs/sim_1/new/tb_led_driver.vhd" \
-
-# Do not sort compile order
-nosort
