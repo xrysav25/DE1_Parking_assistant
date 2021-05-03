@@ -194,27 +194,14 @@ begin
     
     p_puls : process
     begin
-        s_puls <= '1'; wait for 50 ns;
-        s_puls <= '0'; wait for (500 ms - 50 ns);
-        s_puls <= '1'; wait for 50 ns;
-        s_puls <= '0'; wait for (500 ms - 50 ns);
-        s_puls <= '1'; wait for 50 ns;
-        s_puls <= '0'; wait for (500 ms - 50 ns);
-        s_puls <= '1'; wait for 50 ns;
-        s_puls <= '0'; wait for (500 ms - 50 ns);
---        s_puls <= '1'; wait for 10 ns;
---        s_puls <= '0'; wait for (500 ms - 10 ns);
---        s_puls <= '1'; wait for 10 ns;
---        s_puls <= '0'; wait for (500 ms - 10 ns);
---        s_puls <= '1'; wait for 10 ns;
---        s_puls <= '0'; wait for (500 ms - 10 ns);
---        s_puls <= '1'; wait for 10 ns;
---        s_puls <= '0'; wait for (500 ms - 10 ns);
---        s_puls <= '1'; wait for 10 ns;
---        s_puls <= '0'; wait for (500 ms - 10 ns);
---        s_puls <= '1'; wait for 10 ns;
---        s_puls <= '0'; wait for (500 ms - 10 ns);
-        wait;
+    
+        while now < 2000000000 ns loop         -- 75 periods of 100MHz clock
+            s_puls <= '1';
+            wait for 50ns;
+            s_puls <= '0';
+            wait for (20ms-50ns);
+        end loop;
+        wait;                                                                                                                                               
     end process p_puls;
     
     p_echo : process
