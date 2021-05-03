@@ -400,8 +400,8 @@ begin
 end testbench;
 ```
 #### Simulation Waveforms:
-![simulation sensor_driver](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/sensor_driver.png)
-![simulation sensor_logic](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/sensor_logic.png)
+![simulation sensor_driver](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/sensor_driver.PNG)
+![simulation sensor_logic](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/sensor_logic.PNG)
 
 ### LED bargaph module
 LED module takes 2 inputs and has 1 output. One of the inputs is enable signal, which determines if module can function or not. Second input is distance level represented by 4-bit std logic vecotor. Output is 10-bit std logic vector for bargraph itself.
