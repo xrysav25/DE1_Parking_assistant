@@ -32,7 +32,11 @@ To measure the distance, we work with the ultrasonic sensor HC-DR04
 The sensor expects a 10us long pulse, based on which it sends a sequence of ultrasonic pulses and registers their reflection. The sensor returns an echo pulse of a width corresponding to the distance of the object from the sensor.
 Conversion relation: echo pulse length / 58 = distance in cm
 
-The sensor works at a voltage of 5V, so it is not powered from the board but has its own power supply.
+The sensor works at a voltage of 5V, so it is not powered from the board but has its own power supply. Output of the sensor is also 5V so little modification shown bellow is required to drop down the voltage to 3.3V.
+
+|![sensor](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/3.3V%20mod.png)|
+|:--:| 
+|*Sensor modification[5]*|
 
 #### Adaptor board
 Board was designed in Autodesk EAGLE.
@@ -48,7 +52,7 @@ Board was designed in Autodesk EAGLE.
 For LED visualization we have chosem bargraph with 10 LEDs and segments with diferent colors, as can be seen below.
 |![bargaph](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Bargaph%20example.png)|
 |:--:| 
-|*Example of used bargraph[5]*|
+|*Example of used bargraph[6]*|
 
 Its first segment is blue which will represent ON/OFF state indication. Other segments represent actual distance ranging from green to red. For the actual bargraph we have designed small module board, that will conect to Arty board through 2 Pmod connectors.
 
@@ -68,7 +72,7 @@ Board is fitted with bargraph itself, liminig resistors and 2 pinheader blocks. 
 For sound feadback we decided to use active piezzo buzzer witch can worl on 3.3V logic values on Arty board.
 |![buzzer](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezzo.png)|
 |:--:| 
-|*Piezzo buzzer[6]*|
+|*Piezzo buzzer[7]*|
 #### Adaptor board
 Board was designed in Autodesk EAGLE.
 |![model of board piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/Piezo_daptor_model.png)|
@@ -988,6 +992,7 @@ end Behavioral;
    2. Arty A7 board description. In: digilentinc.com [online]. [cit. 2021-04-20]. Avalible at: https://bit.ly/3dwthiU
    3. Arty A7 board. In: digilentinc.com [online]. [cit. 2021-04-20]. Avalible at: https://bit.ly/3vb75kt
    4. HC-SR04 sensor. In: Amazon.com [online]. [cit. 2021-04-27]. Avalible at: https://amzn.to/3dVaez2
-   5. Example bargraph picture. In: Amazon.com [online]. [cit. 2021-04-13]. Avalible at: https://amzn.to/3mHVJ4c
-   6. Active piezzo buzzer. In: conrad.cz [online]. [cit. 2021-04-27]. Avalible at: https://bit.ly/3vlYYkX
+   5. HC-SR04 sensor mod. In: instructables.com [online]. [cit. 2021-05-04]. Avalible at: https://bit.ly/3eVAvw6
+   6. Example bargraph picture. In: Amazon.com [online]. [cit. 2021-04-13]. Avalible at: https://amzn.to/3mHVJ4c
+   7. Active piezzo buzzer. In: conrad.cz [online]. [cit. 2021-04-27]. Avalible at: https://bit.ly/3vlYYkX
 
