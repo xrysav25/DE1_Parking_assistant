@@ -970,13 +970,11 @@ begin
 end Behavioral;
 ```
 
-|![schema](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/schema.png)|
-|:--:| 
-|*Top modul schema*|
+
 
 |![top](https://github.com/xrysav25/DE1_Parking_assistant/blob/top/Images/top.png)|
 |:--:| 
-|*Top modul schema v2*|
+|*Top modul schema*|
 
 
 ## Video
