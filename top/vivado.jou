@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue May  4 13:46:36 2021
+# Process ID: 11948
+# Current directory: D:/Github/Project/DE1_Parking_assistant/top
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11320 D:\Github\Project\DE1_Parking_assistant\top\top.xpr
+# Log file: D:/Github/Project/DE1_Parking_assistant/top/vivado.log
+# Journal file: D:/Github/Project/DE1_Parking_assistant/top\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Github/Project/DE1_Parking_assistant/top/top.xpr
+update_compile_order -fileset sources_1

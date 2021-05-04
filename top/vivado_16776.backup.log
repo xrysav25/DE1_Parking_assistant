@@ -1,0 +1,73 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Apr 30 09:02:54 2021
+# Process ID: 16776
+# Current directory: D:/Github/Project/DE1_Parking_assistant/top
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8596 D:\Github\Project\DE1_Parking_assistant\top\top.xpr
+# Log file: D:/Github/Project/DE1_Parking_assistant/top/vivado.log
+# Journal file: D:/Github/Project/DE1_Parking_assistant/top\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Github/Project/DE1_Parking_assistant/top/top.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/Github/Project/DE1_Parking_assistant/top/top.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/Project/DE1_Parking_assistant/top/top.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sensor_driver' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/Project/DE1_Parking_assistant/top/top.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_sensor_driver_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Github/Project/DE1_Parking_assistant/top/top.srcs/sources_1/new/sensor_driver.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sensor_driver'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Github/Project/DE1_Parking_assistant/top/top.srcs/sim_1/new/tb_sensor_driver.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_sensor_driver'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/Project/DE1_Parking_assistant/top/top.sim/sim_1/behav/xsim'
+"xelab -wto af6013bb15414570a2af751c28966ed6 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_sensor_driver_behav xil_defaultlib.tb_sensor_driver -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto af6013bb15414570a2af751c28966ed6 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_sensor_driver_behav xil_defaultlib.tb_sensor_driver -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.sensor_driver [sensor_driver_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_sensor_driver
+Built simulation snapshot tb_sensor_driver_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source D:/Github/Project/DE1_Parking_assistant/top/top.sim/sim_1/behav/xsim/xsim.dir/tb_sensor_driver_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/Github/Project/DE1_Parking_assistant/top/top.sim/sim_1/behav/xsim/xsim.dir/tb_sensor_driver_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Apr 30 09:14:40 2021. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2020.2/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 116.445 ; gain = 17.621
+INFO: [Common 17-206] Exiting Webtalk at Fri Apr 30 09:14:40 2021...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1002.930 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Github/Project/DE1_Parking_assistant/top/top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_sensor_driver_behav -key {Behavioral:sim_1:Functional:tb_sensor_driver} -tclbatch {tb_sensor_driver.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.

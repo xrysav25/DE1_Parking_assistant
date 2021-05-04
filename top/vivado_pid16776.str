@@ -1,0 +1,172 @@
+/*
+
+Xilinx Vivado v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:45 MST 2020
+IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+
+Process ID (PID): 16776
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Fri Apr 30 09:03:11 CEST 2021
+Time zone: 	Central European Standard Time (Europe/Prague)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	C:/Xilinx/Vivado/2020.2/tps/win64/jre11.0.2
+Java executable location: 	C:/Xilinx/Vivado/2020.2/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	GLaDOS
+User home directory: C:/Users/GLaDOS
+User working directory: D:/Github/Project/DE1_Parking_assistant/top
+User country: 	CZ
+User language: 	cs
+User locale: 	cs_CZ
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2020.2
+RDI_DATADIR: C:/Xilinx/Vivado/2020.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2020.2/bin
+
+Vivado preferences file location: C:/Users/GLaDOS/AppData/Roaming/Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: C:/Users/GLaDOS/AppData/Roaming/Xilinx/Vivado/2020.2/
+Vivado layouts directory: C:/Users/GLaDOS/AppData/Roaming/Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	D:/Github/Project/DE1_Parking_assistant/top/vivado.log
+Vivado journal file location: 	D:/Github/Project/DE1_Parking_assistant/top/vivado.jou
+Engine tmp dir: 	D:/Github/Project/DE1_Parking_assistant/top/.Xil/Vivado-16776-DESKTOP-GLaDOS
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2020.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2020.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2020.2
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,013 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cr):  Open Project : addNotify
+// Opening Vivado Project: D:\Github\Project\DE1_Parking_assistant\top\top.xpr. Version: Vivado v2020.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/Github/Project/DE1_Parking_assistant/top/top.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project D:/Github/Project/DE1_Parking_assistant/top/top.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 98 MB (+100691kb) [00:00:10]
+// [Engine Memory]: 1,013 MB (+910539kb) [00:00:10]
+// [GUI Memory]: 103 MB (+142kb) [00:00:11]
+// [GUI Memory]: 114 MB (+5561kb) [00:00:11]
+// WARNING: HEventQueue.dispatchEvent() is taking  2489 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,013 MB. GUI used memory: 58 MB. Current time: 4/30/21, 9:03:11 AM CEST
+// Project name: top; location: D:/Github/Project/DE1_Parking_assistant/top; part: xc7a35ticsg324-1L
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (top.vhd)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// [GUI Memory]: 134 MB (+14747kb) [00:00:22]
+selectCodeEditor("top.vhd", 202, 241); // bP
+typeControlKey((HResource) null, "top.vhd", 'c'); // bP
+// Elapsed time: 142 seconds
+selectCodeEditor("top.vhd", 119, 98); // bP
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 7); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 8); // D
+// Elapsed time: 262 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_top(Behavioral) (tb_top.vhd)]", 13, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_top(Behavioral) (tb_top.vhd)]", 13, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("tb_top.vhd", 312, 218); // bP
+typeControlKey((HResource) null, "tb_top.vhd", 'c'); // bP
+// Elapsed time: 216 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.vhd", 1); // m
+selectCodeEditor("top.vhd", 166, 128); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top.vhd", 221, 112); // bP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/Project/DE1_Parking_assistant/top/top.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'tb_sensor_driver' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/Project/DE1_Parking_assistant/top/top.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj tb_sensor_driver_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "D:/Github/Project/DE1_Parking_assistant/top/top.srcs/sources_1/new/sensor_driver.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'sensor_driver' INFO: [VRFC 10-163] Analyzing VHDL file "D:/Github/Project/DE1_Parking_assistant/top/top.srcs/sim_1/new/tb_sensor_driver.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'tb_sensor_driver' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/Project/DE1_Parking_assistant/top/top.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto af6013bb15414570a2af751c28966ed6 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_sensor_driver_behav xil_defaultlib.tb_sensor_driver -log elaborate.log" 
+// Tcl Message:  ****** Webtalk v2020.2 (64-bit)   **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020   **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.  source D:/Github/Project/DE1_Parking_assistant/top/top.sim/sim_1/behav/xsim/xsim.dir/tb_sensor_driver_behav/webtalk/xsim_webtalk.tcl -notrace 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [Common 17-186] 'D:/Github/Project/DE1_Parking_assistant/top/top.sim/sim_1/behav/xsim/xsim.dir/tb_sensor_driver_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Apr 30 09:14:40 2021. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2020.2/doc/webtalk_introduction.html. webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 116.445 ; gain = 17.621 INFO: [Common 17-206] Exiting Webtalk at Fri Apr 30 09:14:40 2021... 
+// Tcl Message: run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1002.930 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Github/Project/DE1_Parking_assistant/top/top.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_sensor_driver_behav -key {Behavioral:sim_1:Functional:tb_sensor_driver} -tclbatch {tb_sensor_driver.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2020.2 
+// Elapsed time: 36 seconds
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 
+// Elapsed time: 243 seconds
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a
+// 'd' command handler elapsed time: 280 seconds
+// Elapsed time: 493 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_pwm_2(Behavioral) (tb_pwm_2.vhd)]", 11, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_pwm_2(Behavioral) (tb_pwm_2.vhd)]", 11, true, false, false, false, false, true); // D - Double Click - Node
+closeMainWindow("top - [D:/Github/Project/DE1_Parking_assistant/top/top.xpr] - Vivado 2020.2"); // cr
+// HOptionPane Warning: 'A background task is running. Please wait until it completes to exit Vivado. If you choose to abort background task and exit immediately, you will lose all unsaved changes to project. (Background Task)'
