@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Apr 30 09:14:34 2021
+# Process ID: 3592
+# Current directory: D:/Github/Project/DE1_Parking_assistant/top/top.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source D:/Github/Project/DE1_Parking_assistant/top/top.sim/sim_1/behav/xsim/xsim.dir/tb_sensor_driver_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/Github/Project/DE1_Parking_assistant/top/top.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: D:/Github/Project/DE1_Parking_assistant/top/top.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/Github/Project/DE1_Parking_assistant/top/top.sim/sim_1/behav/xsim/xsim.dir/tb_sensor_driver_behav/webtalk/xsim_webtalk.tcl -notrace

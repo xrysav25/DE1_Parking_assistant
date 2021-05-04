@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Parking_assistant.srcs/sources_1/new/led_driver.vhd" \
+"../../../../Parking_assistant.srcs/sim_1/new/tb_led_driver.vhd" \
+
+# Do not sort compile order
+nosort
