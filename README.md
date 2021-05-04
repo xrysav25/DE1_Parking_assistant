@@ -82,6 +82,12 @@ Board was designed in Autodesk EAGLE.
 |*Board design*|
 |![schematic piezzo](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/Images/piezzo_sch_fixed.png)|
 |*Board schematic*|
+
+### Connection to Arty A7
+|![Arty A7 connection](https://github.com/xrysav25/DE1_Parking_assistant/blob/main/top/arty.png)|
+|:--:| 
+|*Arty A7 connection*|
+
 ## VHDL modules description and simulations
 ### Ultrasonic distance sensor HC-SR04
 The sensor control is divided into two blocks.
